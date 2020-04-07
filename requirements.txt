@@ -4,3 +4,4 @@ python-pdfbox
 requests
 tqdm
 archivenow
+pythainlp
