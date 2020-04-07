@@ -24,12 +24,12 @@ jobs:
     - name: Install pdfbox
       run: sudo apt-get install -y libpdfbox-java
     # You can test your matrix by printing the current Python version
-    - name: Display Python version
+    - name: PDF to Text
       run: |
         pip install -r requirements.txt
-    #    python savepdf.py
-    - name: PDF to Text
-      run: python build.py
+        python build.py
+    - name: Save archive
+      run: python savepdf.py
     - uses: stefanzweifel/git-auto-commit-action@v4.1.2
       with:
         commit_message: Apply thai-covid-19 changes

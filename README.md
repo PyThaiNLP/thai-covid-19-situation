@@ -1,5 +1,5 @@
 # Thai covid-19 situation
 
-[![Build Status](https://travis-ci.org/PyThaiNLP/thai-covid-19-situation.svg?branch=master)](https://travis-ci.org/PyThaiNLP/thai-covid-19-situation)
+![MOPH Archive](https://github.com/PyThaiNLP/thai-covid-19-situation/workflows/MOPH%20Archive/badge.svg)
 
 Thai covid-19 situation text file from MOPH
