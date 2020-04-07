@@ -8,9 +8,9 @@ from archivenow import archivenow
 
 with open("listpdf.txt","r",encoding="utf-8-sig") as f:
     listpdf_temp = [i.strip() for i in f.readlines()]
-print("Save to web.archive.org")
-for i in tqdm.tqdm(listpdf_temp):
-    archivenow.push("https://ddc.moph.go.th/viralpneumonia/file/situation/"+i,"ia")
+#print("Save to web.archive.org")
+#for i in tqdm.tqdm(listpdf_temp):
+#    archivenow.push("https://ddc.moph.go.th/viralpneumonia/file/situation/"+i,"ia")
 
 pdf = pdfbox.PDFBox()
 p = os.path.join(".", "pdf")
