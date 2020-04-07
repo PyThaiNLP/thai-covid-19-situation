@@ -1,4 +1,5 @@
 from archivenow import archivenow
+from tqdm import tqdm
 
 with open("listpdf.txt","r",encoding="utf-8-sig") as f:
     listpdf_temp = [i.strip() for i in f.readlines()]
