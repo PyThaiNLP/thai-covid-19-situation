@@ -2,4 +2,4 @@ wget
 python-pdfbox
 requests
 tqdm
-savepagenow
+archivenow
