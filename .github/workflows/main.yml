@@ -20,5 +20,5 @@ jobs:
     # You can test your matrix by printing the current Python version
     - name: Display Python version
       run: |
-        pip install -e requirements.txt
+        pip install -r requirements.txt
         python savepdf.py
