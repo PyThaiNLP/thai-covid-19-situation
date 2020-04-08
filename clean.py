@@ -11,7 +11,10 @@ def writefile(path, data):
         f.write(data)
 
 def clean(data):
-    return data.replace("","์").replace("","่").replace("","้").replace("","ี").replace("","๋").replace("","้").replace("","่").replace("","ิ").replace("","ื").replace("","ั").replace("","๊").replace("","ั")
+    rule = [("","์"),("","่"),("","้"),("","ี"),("","๋"),("","้"),("","่"),("","ิ"),("","ื"),("","ั"),("","๊"),(" ่","่"),(" ้","้"),(" ๋","๋"),(" ๊","๊"),(" ็","็")]
+    for i in rule:
+        data = data.replace(i[0],i[1])
+    return data
 
 listdata = [normalize(clean(readfile(i))) for i in listfile]
 
