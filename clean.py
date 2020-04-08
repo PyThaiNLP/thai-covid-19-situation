@@ -11,12 +11,12 @@ def writefile(path, data):
         f.write(data)
 
 def clean(data):
-    rule = [("","์"),("","่"),("","้"),("","ี"),("","๋"),("","้"),("","่"),("","ิ"),("","ื"),("","ั"),("","๊"),(" ่","่"),(" ้","้"),(" ๋","๋"),(" ๊","๊"),(" ็","็"),(" ั","ั"),(" ู้"," ู้".replace(" ",""))]
+    rule = [("","์"),("","่"),("","้"),("","ี"),("","๋"),("","้"),("","่"),("","ิ"),("","ื"),("","ั"),("","๊"),(" ่","่"),(" ้","้"),(" ๋","๋"),(" ๊","๊"),(" ็","็"),(" ั","ั"),(" ู้"," ู้".replace(" ","")),(" ื้"," ื้".replace(" ","")),(" ์","์"),(" ิ","ิ"),(" ื","ื")]
     for i in rule:
         data = data.replace(i[0],i[1])
     return data
 
-listdata = [normalize(clean(readfile(i))) for i in listfile]
+listdata = [normalize(clean(normalize(readfile(i)))) for i in listfile]
 
 for i,file in enumerate(listfile):
     writefile(file, listdata[i])
