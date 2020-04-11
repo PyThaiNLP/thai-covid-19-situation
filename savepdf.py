@@ -7,4 +7,4 @@ with open("listpdf.txt","r",encoding="utf-8-sig") as f:
 print("Save to web.archive.org")
 for i in tqdm(listpdf_temp):
     print(archivenow.push("https://ddc.moph.go.th/viralpneumonia/file/situation/"+i,"ia"))
-    time.sleep(1)
+    time.sleep(20)
