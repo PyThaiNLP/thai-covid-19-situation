@@ -24,6 +24,7 @@ listpdf = [i for i in listpdf_temp if i not in listfile]
 for i in listpdf:
     try:
         wget.download("https://ddc.moph.go.th/viralpneumonia/file/situation/"+i,out=p)
-        pdf.extract_text(os.path.join(p,i),output_path=os.path.join(txt,i.replace("pdf","txt")))
+        pdf.extract_text(os.path.join(p,i),output_path = os.path.join(txt,i.replace("pdf","txt")))
     except Exception as e:
+        print("File : " + str(i))
         print(e)
