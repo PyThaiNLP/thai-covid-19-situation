@@ -11,8 +11,8 @@ import re
 with open("listpdf.txt","r") as f:
   list_file = [i.strip() for i in f.readlines()]
 
-oldpage = requests.get("https://ddc.moph.go.th/viralpneumonia/situation_more.php", timeout=30)
-page = requests.get("https://ddc.moph.go.th/viralpneumonia/situation.php", timeout=30)
+oldpage = requests.get("https://ddc.moph.go.th/viralpneumonia/situation_more.php", timeout=90)
+page = requests.get("https://ddc.moph.go.th/viralpneumonia/situation.php", timeout=90)
 soup= BeautifulSoup(oldpage.text, "html.parser")
 links = soup.find_all('a', href=re.compile(r'(\.pdf)'))
 for i in links:
