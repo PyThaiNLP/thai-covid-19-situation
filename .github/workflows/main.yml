@@ -26,8 +26,8 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 11.0.x
-    #- name: Install pdfbox
-    #  run: sudo apt-get install -y libpdfbox-java
+    - name: Install pdfbox
+      run: sudo apt-get install -y libpdfbox-java
     # You can test your matrix by printing the current Python version
     - name: PDF to Text
       run: |
