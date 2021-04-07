@@ -1,6 +1,6 @@
 wget
 JPype1
-python-pdfbox==0.1.8
+python-pdfbox
 requests
 tqdm
 archivenow
