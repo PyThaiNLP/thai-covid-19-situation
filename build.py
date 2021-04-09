@@ -1,6 +1,6 @@
 import glob,os
 from pathlib import Path
-import pdfbox
+#import pdfbox
 import wget
 import requests
 import tqdm
@@ -46,7 +46,7 @@ with open("listpdf.txt","r",encoding="utf-8-sig") as f:
 #for i in tqdm.tqdm(listpdf_temp):
 #    archivenow.push("https://ddc.moph.go.th/viralpneumonia/file/situation/"+i,"ia")
 
-pdf = pdfbox.PDFBox()
+#pdf = pdfbox.PDFBox()
 p = os.path.join(".", "pdf")
 txt = os.path.join(".", "text")
 #print(p)
@@ -58,7 +58,11 @@ listpdf = [i for i in listpdf_temp if i not in listfile]
 for i in listpdf:
     try:
         wget.download("https://ddc.moph.go.th/viralpneumonia/file/situation/"+i,out=p)
-        pdf.extract_text(os.path.join(p,i),output_path = os.path.join(txt,i.replace("pdf","txt")))
+        #pdf.extract_text(os.path.join(p,i),output_path = os.path.join(txt,i.replace("pdf","txt")))
+        try:
+          archivenow.push("https://ddc.moph.go.th/viralpneumonia/file/situation/"+i,"ia")
+        except:
+          pass
     except Exception as e:
         print("File : " + str(i))
         print(e)
